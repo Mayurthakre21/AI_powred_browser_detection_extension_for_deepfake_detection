@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Extractor</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      width: 280px;
+      padding: 15px;
+      background:rgb(233, 233, 239);
+      color: #FFFFFF;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(204, 44, 107, 0.6);
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 15px;
+      color:rgb(6, 4, 32);
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      color:rgb(0, 0, 0);
+      background:rgb(255, 187, 14);
+      box-shadow: #CC2C6B 0px 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background:rgb(81, 255, 0);
+      transform: scale(1.05);
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      font-size: 14px;
+      color:rgb(5, 0, 57);
+      margin-bottom: 10px;
+    }
+
+    .floating-sidebar {
+      position: fixed;
+      top: 50px;
+      right: 10px;
+      width: 300px;
+      background: rgba(17, 14, 52, 0.75);
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(204, 44, 107, 0.4);
+      backdrop-filter: blur(12px);
+      padding: 20px;
+      color:rgb(236, 235, 243);
+      z-index: 10000;
+      display: none;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    #close-sidebar {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      border: none;
+      background: #CC2C6B;
+      color: white;
+      cursor: pointer;
+      padding: 5px 8px;
+      border-radius: 50%;
+      font-weight: bold;
+      box-shadow: 0 0 6px rgb(255, 254, 254);
+    }
+
+    #close-sidebar:hover {
+      background: #A82055;
+    }
+
+    
+  .real-result {
+  color: green;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 0 0 4px white;
+}
+
+.fake-result {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 0 0 4px white;
+}
+    hr {
+      margin: 15px 0;
+      border-top: 1px solid #9D9BB3;
+    }
+  #status-message{
+     color:black;
+     font-weight: bold;
+    font-size: 16px;
+  }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    
+ 
+
+  </style>
+</head>
+<body>
+  <h2> Deepfake Detector</h2>
+  <ul id="videoList"> Video is being scanned...</ul>
+  <button id="scan-btn">Scan Page</button>
+  <div id="status-message"></div>
+  <button id="deepfake-btn">Show Results</button>
+
+  <!-- Floating Sidebar -->
+  <div id="deepfake-sidebar" class="floating-sidebar">
+    <button id="close-sidebar">X</button>
+    <h2> Scan Results</h2>
+    <ul id="deepfake-results"></ul>
+  </div>
+
+  <hr>
+  <div id="predictionResult"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+
+
+
