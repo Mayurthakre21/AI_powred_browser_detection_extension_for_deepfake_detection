@@ -1,4 +1,4 @@
-﻿# AI powered browser detection extension for deepfake detection
+﻿# AI powered browser extension for deepfake detection
 Deepfakes are AI-generated synthetic media that can manipulate faces and voices in videos. This poses risks in misinformation, fraud, and security. The objective of this project is to build a real-time browser extension with a deep learning backend that detects deepfake videos and provides users with instant alerts.
 
 🏗️ System Architecture
@@ -70,4 +70,5 @@ Mayur Thakre (Team Lead, Model + Backend  Development)
 Rutuja kurwale (frontend + Backend Development)
 Rishikesh Ghadole (model development)
 Yash Katgeye (model development)
+
 
